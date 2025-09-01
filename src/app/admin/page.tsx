@@ -24,7 +24,7 @@ export default function AdminDashboard() {
           </Card>
         </Link>
 
-        <Link href="/admin/classes">
+        <Link href="/admin/subjects">
           <Card className="cursor-pointer">
             <CardHeader>
               <BookOpen className="w-6 h-6 mb-2" />
