@@ -75,6 +75,7 @@ export default function SubjectsPage() {
       <Table>
         <TableHeader>
           <TableRow>
+            <TableHead>ID</TableHead>
             <TableHead>Name</TableHead>
             <TableHead>Class</TableHead>
           </TableRow>
@@ -82,6 +83,7 @@ export default function SubjectsPage() {
         <TableBody>
           {subjects?.map((subject) => (
             <TableRow key={subject._id}>
+              <TableCell> {subject._id} </TableCell>
               <TableCell>{subject.name}</TableCell>
               <TableCell>{subject.class}</TableCell>
             </TableRow>

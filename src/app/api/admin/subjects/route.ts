@@ -6,7 +6,7 @@ import Subject from "@/models/Subject";
 export async function GET() {
   try {
     await dbConnect();
-    const subjects = await Subject.find().populate("chapters").exec();
+    const subjects = await Subject.find()
     return NextResponse.json(subjects, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error: "Failed to fetch subjects" }, { status: 500 });
