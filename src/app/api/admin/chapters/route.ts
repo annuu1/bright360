@@ -7,7 +7,7 @@ export async function GET() {
   try {
     await dbConnect();
     const chapters = await Chapter.find().populate("subject").exec();
-    return NextResponse.json({ chapters }, { status: 200 });
+    return NextResponse.json(chapters, { status: 200 });
   } catch (error) {
     console.error("GET /api/admin/chapters error:", error);
     return NextResponse.json(
